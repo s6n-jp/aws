@@ -7,6 +7,14 @@ terraform {
       source  = "hashicorp/aws"
     }
   }
+
+  cloud {
+    organization = "s6n-jp"
+
+    workspaces {
+      name = "aws"
+    }
+  }
 }
 
 provider "aws" {
